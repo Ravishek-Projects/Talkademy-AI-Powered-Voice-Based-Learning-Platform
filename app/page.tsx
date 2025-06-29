@@ -6,10 +6,10 @@ import {getAllCompanions, getRecentSessions} from "@/lib/actions/companion.actio
 import {getSubjectColor} from "@/lib/utils";
 
 const Page = async () => {
-    /*const companions = await getAllCompanions({ limit: 3 });
-    const recentSessionsCompanions = await getRecentSessions(10);*/
-    const companions: Companion[] = await getAllCompanions({ limit: 3 });
-    const recentSessionsCompanions: Companion[] = await getRecentSessions(10);
+    const companions = await getAllCompanions({ limit: 3 });
+    const recentSessionsCompanions = await getRecentSessions(10);
+    // const companions: Companion[] = await getAllCompanions({ limit: 3 });
+    // const recentSessionsCompanions: Companion[] = await getRecentSessions(10);
 
 
   return (

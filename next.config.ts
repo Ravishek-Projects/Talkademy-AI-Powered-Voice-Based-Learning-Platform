@@ -13,19 +13,10 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
         hostname: "img.clerk.com",
-      },
-    ],
-  },
-  experimental: {
-    turbo: {
-      // Example: You can define custom loaders here if needed
-      // loaders: {
-      //   ".mdx": "@mdx-js/loader",
-      // },
-    },
-  },
+      }
+    ]
+  }
 };
 
 
