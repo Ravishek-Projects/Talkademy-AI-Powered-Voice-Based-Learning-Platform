@@ -20,7 +20,9 @@ export const createCompanion = async (formData: CreateCompanion) => {
 
 export const getAllCompanions = async ({ limit = 10, page = 1, subject, topic }: GetAllCompanions) => {
     const supabase = createSupabaseClient();
-
+    if (!supabase) {
+        console.log('Supabase client creation failed');
+    }
     let query = supabase.from('companions').select();
 
     if(subject && topic) {

@@ -1,19 +1,34 @@
 import {withSentryConfig} from "@sentry/nextjs";
 import type { NextConfig } from "next";
 
+// next.config.ts
+
 const nextConfig: NextConfig = {
-    typescript: {
-      ignoreBuildErrors: true
-    },
-    eslint: {
-        ignoreDuringBuilds: true
-    },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   images: {
-      remotePatterns: [
-          { hostname: 'img.clerk.com'}
-      ]
-  }
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "img.clerk.com",
+      },
+    ],
+  },
+  experimental: {
+    turbo: {
+      // Example: You can define custom loaders here if needed
+      // loaders: {
+      //   ".mdx": "@mdx-js/loader",
+      // },
+    },
+  },
 };
+
+
 
 export default withSentryConfig(nextConfig, {
 // For all available options, see:
