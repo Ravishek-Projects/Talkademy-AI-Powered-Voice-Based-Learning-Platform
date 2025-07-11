@@ -10,8 +10,11 @@ const bricolage = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  title: "Converso",
+  title: "Talkacademy - Your Personal AI mentor",
   description: "Real-time AI Teaching Platform",
+  icons: {
+    icon: "/images/logoForFevicon.svg",
+  },
 };
 
 export default function RootLayout({
